@@ -144,23 +144,59 @@
 
 	<!-- Walkscore -->
 	<section id="walkscore" class="main style3 secondary">
-		<div class="content">
-			<header>
-				<h2>Walkscore</h2>
-			</header>
-			<div class="box">
-				<form method="post" action="#">
-					<div class="fields">
-						<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-						<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-						<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+		<div class="box">
+			<div>
+				<div class="walkscore-container" id="GoToMap">
+					<h2><span class="lines">Walkscore</span></h2>
+
+					<div>
+						<div id="div_map_show" class="embed-container" style="min-height: 540px;">
+							<script type='text/javascript'>
+
+								var ws_wsid = '86e8545d301a450c98fb0f30ad90ff47';
+								var ws_address = '#710-1205 Queen Street West Toronto';
+								var ws_width = '700';
+								var ws_height = '400';
+								var ws_format = 'narrow';
+								if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+									var ws_layout = 'vertical'; // vertical
+									ws_width = '336';
+								} else {
+									var ws_layout = 'horizontal'; // vertical
+								}
+								var ws_commute = 'true';
+								var ws_transit_score = 'true';
+								var ws_map_modules = 'all';
+								var ws_params = "wsid=" + ws_wsid + "&width=" + ws_width + "&height=" + ws_height + "&layout=" + ws_layout;
+								function load_walkscrore() {
+									//jQuery("#div_map_show").html('<iframe src="https://www.walkscore.com/serve-tile.php?' + ws_params + '" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" scrolling="no" width="' + ws_width + '" height="' + ws_height + 'px"></iframe>');
+								}
+								setTimeout('load_walkscrore()', 1000);
+
+
+
+							</script>
+							<style type='text/css'>
+								#ws-walkscore-tile {
+									position: relative;
+									text-align: left
+								}
+
+								#ws-walkscore-tile * {
+									float: none;
+								}
+							</style>
+							<div id='ws-walkscore-tile'></div>
+							<script async type='text/javascript'
+								src='https://www.walkscore.com/tile/show-walkscore-tile.php'></script>
+
+
+
+
+						</div>
 					</div>
-					<ul class="actions special">
-						<li><input type="submit" value="Send Message" /></li>
-					</ul>
-				</form>
+				</div>
 			</div>
-		</div>
 	</section>
 
 	<!-- Footer -->
