@@ -2261,7 +2261,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/710-1205-queen-street-west-toronto-image1.jpg");
+		background: url("images/overlay.png"), url("../../images/5-allan-park-road.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2713,5 +2713,6 @@ input, select, textarea {
 		#walkscore {
 			justify-content: center;
 		}
+
 
 
