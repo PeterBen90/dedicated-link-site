@@ -144,7 +144,7 @@
 						});
 
 				// Contact.
-					$('#walkscore')
+					$('#contact')
 						.scrollex({
 							top:		'50%',
 							delay:		50,
@@ -169,8 +169,8 @@
 					$('.main.style2')
 						.unscrollex();
 
-				// Walkscore.
-					$('#walkscore')
+				// Contact.
+					$('#contact')
 						.unscrollex();
 
 			};
